@@ -1,4 +1,22 @@
+/*
+===============================================================================
+DDL Script: Create Gold Views
+===============================================================================
+Script Purpose:
+    This script creates views for the Gold layer in the data warehouse. 
+    The Gold layer represents the final dimension and fact tables (Star Schema)
 
+    Each view performs transformations and combines data from the Silver layer 
+    to produce a clean, enriched, and business-ready dataset.
+
+Usage:
+    - These views can be queried directly for analytics and reporting.
+===============================================================================
+*/
+
+-- ============================================================================
+-- Create Dimension table: Dim_Customer
+-- ============================================================================
 CREATE OR REPLACE VIEW gold.Dim_Customer AS
 SELECT 
 	ROW_NUMBER() OVER(ORDER BY CONCAT(CONTACTFIRSTNAME,' ',CONTACTLASTNAME), PHONE, ADDRESSLINE1) AS customerid,
@@ -15,7 +33,9 @@ SELECT
 FROM silver.kaggle_sample_sales
 GROUP BY company, contactfullname, phone, addressline1, addressline2, city, state, country, territory, postalcode
 
-
+-- ============================================================================
+-- Create Dimension table: Dim_Product
+-- ============================================================================
 CREATE OR REPLACE VIEW gold.Dim_Product AS
 SELECT 
 	PRODUCTCODE AS productcode,
@@ -24,7 +44,9 @@ SELECT
 FROM silver.kaggle_sample_sales
 GROUP BY productcode, productline, msrp
 
-
+-- ============================================================================
+-- Create Fact table: Fact_Sales
+-- ============================================================================
 CREATE OR REPLACE VIEW gold.Fact_Sales AS
 SELECT
 	ORDERNUMBER AS ordernumber,
@@ -45,9 +67,4 @@ LEFT JOIN gold.Dim_Customer cs
 ON  cs.contactfullname = CONCAT(kg.CONTACTFIRSTNAME,' ', kg.CONTACTLASTNAME)
 AND cs.phone = kg.PHONE
 AND cs.addressline1 = kg.ADDRESSLINE1
-
-SELECT * FROM gold.Fact_Sales WHERE productcode = 'S700_3505'
-
-SELECT * FROM silver.kaggle_sample_sales WHERE PRODUCTCODE = 'S700_3505'
-
 
