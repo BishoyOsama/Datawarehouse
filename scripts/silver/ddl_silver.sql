@@ -1,3 +1,15 @@
+/*
+===============================================================================
+DDL Script: Create Silver Table
+===============================================================================
+Script Purpose:
+    This script creates table in the 'silver' schema, dropping existing table 
+    if it already exists.
+	  Run this script to re-define the DDL structure of 'silver' Table
+===============================================================================
+*/
+
+
 DROP TABLE IF EXISTS silver.Kaggle_sample_sales;
 
 	CREATE TABLE silver.kaggle_sample_sales (
