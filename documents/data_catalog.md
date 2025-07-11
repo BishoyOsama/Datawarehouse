@@ -20,7 +20,7 @@
     <b>Columns:</b> 
   </li>
 </ul>
-<table border="1" cellpadding="8" cellspacing="0">
+<table cellpadding="8" cellspacing="0">
   <thead>
     <tr>
       <th>Column Name</th>
@@ -49,7 +49,7 @@
 <hr>
 <br>
 <p fontsize= "8">
-  <b>1.gold.dim_customer</b>
+  <b>2.gold.dim_customer</b>
 </p>
 <ul>
   <li>
@@ -125,3 +125,88 @@
     </tr>
   </tbody>
 </table>
+<hr>
+<br>
+<p fontsize= "8">
+  <b>3.gold.fact_sales</b>
+</p>
+<ul>
+  <li>
+    <b>Purpose:</b> Stores transactional sales data
+  </li>
+  <li>
+    <b>Columns:</b> 
+  </li>
+</ul>
+<table cellpadding="8" cellspacing="0">
+  <thead>
+    <tr>
+      <th>Column Name</th>
+      <th>Data Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>ordernumber</td>
+      <td>INT</td>
+      <td>Unique Identifier for the orders</td>
+    </tr>
+    <tr>
+      <td>quantity</td>
+      <td>INT</td>
+      <td>Quantity requested by the customer (quantity sold)</td>
+    </tr>
+    <tr>
+      <td>priceperitem</td>
+      <td>FLOAT</td>
+      <td>Price per each item sold </td>
+    </tr>
+    <tr>
+      <td>orderlinenumber</td>
+      <td>INT</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>orderdate</td>
+      <td>DATE</td>
+      <td>Date when order is placed by a company </td>
+    </tr>
+    <tr>
+      <td>productcode</td>
+      <td>VARCHAR(50)</td>
+      <td>Foreign key of related product to dim_product table </td>
+    </tr>
+    <tr>
+      <td>customerid</td>
+      <td>INT</td>
+      <td>Foreign key of related customer to dim_customer table </td>
+    </tr>
+    <tr>
+      <td>dealsize</td>
+      <td>VARCHAR(50)</td>
+      <td>Deal size type (eg. large)</td>
+    </tr>
+    <tr>
+      <td>status</td>
+      <td>VARCHAR(50)</td>
+      <td>Order Status (eg. shipped, disputed) </td>
+    </tr>
+    <tr>
+      <td>quarter</td>
+      <td>INT</td>
+      <td>Quarter of the year where order took place</td>
+    </tr>
+    <tr>
+      <td>month</td>
+      <td>INT</td>
+      <td>Month of the year where order took place </td>
+    </tr>
+    <tr>
+      <td>year</td>
+      <td>INT</td>
+      <td>Year where order took place </td>
+    </tr>
+  </tbody>
+</table>
+
