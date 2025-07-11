@@ -1,4 +1,4 @@
-# 🧊 Sample Sales Analytics Project (Medallion Architecture + Power BI)
+# 🧊 Sales Analytics Project (Medallion Architecture + Power BI)
 
 This repository contains a complete data analytics pipeline for analyzing sales data using the **Medallion Architecture** (Bronze → Silver → Gold) and visualizing insights using **Power BI**.
 
@@ -52,3 +52,6 @@ This project demonstrates:
 | Reporting    | Power BI                          |
 
 ---
+## Power bi Reports
+- generating business insights regarding business sales and profit of each customer 
+<img width="1159" height="652" alt="profitvssales" src="https://github.com/user-attachments/assets/07e87d8a-f7d4-448a-b7c2-17ed7fdb94b8" />
