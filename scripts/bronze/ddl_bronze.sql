@@ -1,3 +1,15 @@
+/*
+===============================================================================
+DDL Script: Create Bronze Table
+===============================================================================
+Script Purpose:
+    This script creates table in the 'bronze' schema, dropping existing table 
+    if it already exists.
+	  Run this script to re-define the DDL structure of 'bronze' Table
+===============================================================================
+*/
+
+
 DROP TABLE IF EXISTS bronze.Kaggle_sample_sales;
 
 CREATE TABLE bronze.kaggle_sample_sales (
