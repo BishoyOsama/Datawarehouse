@@ -1,3 +1,29 @@
+<style>
+  table.custom-table {
+    border-collapse: separate;
+    border-spacing: 0;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    overflow: hidden;
+    font-size: 14px;
+    width: 100%;
+  }
+
+  table.custom-table th,
+  table.custom-table td {
+    padding: 10px 12px;
+    border-bottom: 1px solid #eee;
+    text-align: left;
+  }
+
+  table.custom-table thead {
+    background-color: #f2f2f2;
+  }
+
+  table.custom-table tr:last-child td {
+    border-bottom: none;
+  }
+</style>
 <h1>
   Gold Layer Data Catalog
 </h1>
@@ -12,7 +38,7 @@
 <p fontsize= "8">
   <b>1.gold.dim_product</b>
 </p>
-<table border="1" cellpadding="8" cellspacing="0" style="border-radius: 8">
+<table border="1" cellpadding="8" cellspacing="0" class = "custom-table">
   <thead>
     <tr>
       <th>Column Name</th>
