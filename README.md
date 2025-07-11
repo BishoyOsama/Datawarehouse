@@ -30,21 +30,15 @@ This project demonstrates:
   - Added surrogate keys for dimensions
 
 - **Tables**:
-  - `silver.dim_customer`
-  - `silver.dim_product`
-  - `silver.dim_date`
-  - `silver.fact_sales`
+  - `silver.kaggle_sample_sales`
 
 ### 🟡 Gold Layer
 - **Purpose**: Business-ready data marts for reporting.
-- **Features**:
-  - Aggregated KPIs by month, customer, and product line
-  - Measures like Total Sales, Profit, Order Count, New vs. Repeat Customers
-
+  
 - **Tables**:
-  - `gold.sales_summary`
-  - `gold.customer_lifecycle`
-  - `gold.monthly_performance`
+  - `gold.Fact_Sales`
+  - `gold.Dim_Customer`
+  - `gold.Dim_Product`
 
 ---
 
