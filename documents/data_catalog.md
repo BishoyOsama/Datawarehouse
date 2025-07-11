@@ -6,8 +6,13 @@
   The Gold Layer is the business-level data representation, structured to support analytical and reporting use cases. It consists of dimension tables and fact tables for specific business metrics, and follows <b>star schema model.</b>
 </p>
 
-<p>1.gold.dim_product</p>
-<table border="1" cellpadding="8" cellspacing="0">
+<hr>
+<br>
+
+<p fontsize= "8">
+  <b>1.gold.dim_product</b>
+</p>
+<table border="1" cellpadding="8" cellspacing="0" style="border-radius: 8">
   <thead>
     <tr>
       <th>Column Name</th>
